@@ -41,18 +41,18 @@ namespace Serialization
         }
         static void XmlSerialization()
         {
-            CircleXML TestCircle5 = new CircleXML(Color.Red, Color.Blue, 15);
-            CircleXML TestCircle6 = new CircleXML(Color.Purple, Color.White, 8);
-            CircleXML TestCircle7 = new CircleXML(Color.Blue, Color.Yellow, 19);
-            CircleXML TestCircle8 = new CircleXML(Color.Black, Color.Green, 24);
+            CircleXML TestCircle1 = new CircleXML(Color.Red, Color.Blue, 15);
+            CircleXML TestCircle2 = new CircleXML(Color.Purple, Color.White, 8);
+            CircleXML TestCircle3 = new CircleXML(Color.Blue, Color.Yellow, 19);
+            CircleXML TestCircle4 = new CircleXML(Color.Black, Color.Green, 24);
             Console.WriteLine("----XMLSerialization----");
-            XMLSerialization.Serialize<CircleXML>(TestCircle5, nameof(TestCircle5));
-            CircleXML CircleDeser = (CircleXML)XMLSerialization.Deserialize<CircleXML>("TestCircle5.xml");
+            XMLSerialization.Serialize<CircleXML>(TestCircle1, nameof(TestCircle1));
+            CircleXML CircleDeser = (CircleXML)XMLSerialization.Deserialize<CircleXML>("TestCircle1.xml");
             Console.WriteLine(CircleDeser.GetInfo());
 
             Console.WriteLine("-------------------------------------------------");
 
-            CircleXML[] CircleXMLArray = new CircleXML[] { TestCircle6, TestCircle7, TestCircle8 };
+            CircleXML[] CircleXMLArray = new CircleXML[] { TestCircle2, TestCircle3, TestCircle4 };
             XMLSerialization.Serialize<CircleXML[]>(CircleXMLArray, nameof(CircleXMLArray));
             CircleXML[] DeserArray = (CircleXML[])XMLSerialization.Deserialize<CircleXML[]>("CircleXMLArray.xml");
             foreach (CircleXML k in DeserArray)
@@ -62,7 +62,7 @@ namespace Serialization
 
             Console.WriteLine("-------------------------------------------------");
 
-            List<CircleXML> CircleXMLList = new List<CircleXML>() { TestCircle6, TestCircle7, TestCircle8 };
+            List<CircleXML> CircleXMLList = new List<CircleXML>() { TestCircle2, TestCircle3, TestCircle4 };
             XMLSerialization.Serialize<List<CircleXML>>(CircleXMLList, nameof(CircleXMLList));
             List<CircleXML> DeserList = (List<CircleXML>)XMLSerialization.Deserialize<List<CircleXML>>("CircleXMLList.xml");
             foreach (CircleXML k in DeserArray)

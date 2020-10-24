@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CircleXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FillColor>Red</FillColor>
+  <OutlineColor>Blue</OutlineColor>
+  <Radius>15</Radius>
+</CircleXML>

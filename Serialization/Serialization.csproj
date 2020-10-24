@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="XML\" />
     <Folder Include="JSON\" />
     <Folder Include="Custom\" />
   </ItemGroup>

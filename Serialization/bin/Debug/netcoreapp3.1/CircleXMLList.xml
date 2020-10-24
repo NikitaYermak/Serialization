@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfCircleXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CircleXML>
+    <FillColor>Purple</FillColor>
+    <OutlineColor>White</OutlineColor>
+    <Radius>8</Radius>
+  </CircleXML>
+  <CircleXML>
+    <FillColor>Blue</FillColor>
+    <OutlineColor>Yellow</OutlineColor>
+    <Radius>19</Radius>
+  </CircleXML>
+  <CircleXML>
+    <FillColor>Black</FillColor>
+    <OutlineColor>Green</OutlineColor>
+    <Radius>24</Radius>
+  </CircleXML>
+</ArrayOfCircleXML>

@@ -16,12 +16,12 @@ namespace Serialization.Binary
                 fs.Close();
             }
         }
-        public static object Deserialize(string path)
+        public static T Deserialize<T>(string path)
         {
             using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 BinaryFormatter bf = new BinaryFormatter();
-                object deserialized = (object)bf.Deserialize(fs);
+                T deserialized = (T)bf.Deserialize(fs);
                 fs.Close();
                 return deserialized;
             }

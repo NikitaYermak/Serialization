@@ -1,25 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Serialization;
 
-namespace Serialization.Binary
+namespace Serialization.XML
 {
     [Serializable]
-    class CircleBinary
+    public class Circle
     {
-        private Color FillColor { get; set; }
-        private Color OutlineColor { get; set; }
-        private double Radius { get; set; }
-        public CircleBinary(Color fillColor, Color outlineColor, double radius)
+        public Color FillColor { get; set; }
+        public Color OutlineColor { get; set; }
+        public double Radius { get; set; }
+        public Circle(Color fillColor, Color outlineColor, double radius)
         {
             this.FillColor = fillColor;
             this.OutlineColor = outlineColor;
             this.Radius = radius;
         }
+        public Circle() { }
         public float Area()
         {
-            return (float)(3.1415 * Math.Pow(Radius, 2));  
+            return (float)(3.1415 * Math.Pow(Radius, 2));
         }
         public float Length()
         {

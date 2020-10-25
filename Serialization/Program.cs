@@ -62,7 +62,7 @@ namespace Serialization
 
             Console.WriteLine("-------------------------------------------------");
 
-            List<CircleXML> CircleXMLList = new List<CircleXML>() { TestCircle2, TestCircle3, TestCircle4 };
+            List<CircleXML> CircleXMLList = new List<CircleXML>() { TestCircle2, TestCircle3, TestCircle4  };
             XMLSerialization.Serialize<List<CircleXML>>(CircleXMLList, nameof(CircleXMLList));
             List<CircleXML> DeserList = (List<CircleXML>)XMLSerialization.Deserialize<List<CircleXML>>("CircleXMLList.xml");
             foreach (CircleXML k in DeserArray)
@@ -70,6 +70,10 @@ namespace Serialization
                 Console.WriteLine(k.GetInfo() + "\n");
             }
             Console.WriteLine("-------------------------------------------------");
+        }
+        static void JSONSerialization()
+        {
+
         }
         static void Main(string[] args)
         {

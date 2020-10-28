@@ -93,11 +93,39 @@ namespace Serialization
                 Console.WriteLine(k.GetInfo() + "\n");
             }
         }
+        static void CustomSerialization()
+        {
+            ColorWriteLine("----CustomSerializationObject----", ConsoleColor.Yellow);
+            BinarySerialization.Serialize(TestCircle1, "Custom/" + nameof(TestCircle1));
+            Circle CircleDeser = BinarySerialization.Deserialize<Circle>("Custom/TestCircle1.bin");
+            Console.WriteLine(CircleDeser.GetInfo() + "\n");
+
+            ColorWriteLine("----CustomSerializationObject----", ConsoleColor.Yellow);
+
+            Circle[] CircleArray = new Circle[] { TestCircle2, TestCircle3, TestCircle4 };
+            BinarySerialization.Serialize(CircleArray, "Custom/" + nameof(CircleArray));
+            Circle[] DeserArray = BinarySerialization.Deserialize<Circle[]>("Custom/CircleArray.bin");
+            foreach (Circle k in DeserArray)
+            {
+                Console.WriteLine(k.GetInfo() + "\n");
+            }
+
+            ColorWriteLine("----CustomSerializationObject----", ConsoleColor.Yellow);
+
+            List<Circle> CircleList = new List<Circle>() { TestCircle2, TestCircle3, TestCircle4 };
+            BinarySerialization.Serialize(CircleList, "Custom/" + nameof(CircleList));
+            List<Circle> DeserList = BinarySerialization.Deserialize<List<Circle>>("Custom/CircleList.bin");
+            foreach (Circle k in DeserArray)
+            {
+                Console.WriteLine(k.GetInfo() + "\n");
+            }
+        }
         static void Main(string[] args)
         {
             BinSerialization();
             XmlSerialization();
             JsonSerialization();
+            CustomSerialization();
         }
         static void ColorWriteLine(string text, ConsoleColor color)
         {
